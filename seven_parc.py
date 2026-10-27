@@ -64,7 +64,11 @@ class Parser:
             link = element.find_element(By.TAG_NAME, 'a')
             self.links_list.append(link.get_attribute('href'))
     
-
+# get all links from the page by class name value value = 'block'
+#clear aads = []
+for item in all_links:
+    if item is not None and r'/product/' in item:
+        clear_ads.appenditem
     
 
 
