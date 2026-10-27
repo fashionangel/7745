@@ -16,6 +16,12 @@ class Parser:
         self.links_list = [] 
         self.date_dict = {}
 
+    # def tryis(self):
+    #     clickable_element = WebDriverWait(self.driver, 2).until(
+    #       EC.element_to_be_clickable((By.ID, "dldkdAccept"))
+    #     )
+    #     clickable_element.click()
+
     def accept_cookie(self):
         clickable_element = WebDriverWait(self.driver, 2).until(
             EC.element_to_be_clickable((By.ID, "dldkdAccept"))
@@ -24,9 +30,9 @@ class Parser:
 
     def electro_choice(self):
         clickable_element = WebDriverWait(self.driver, 5).until(  #min-h-[54px]    
-            EC.element_to_be_clickable((By.XPATH, "//*[@id='catalog-filter-form']/div[5]/div[2]/div[2]/label/span[1]/span"))
+            EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/div[1]/div[5]/div/div/main/div[2]/div[2]/aside/div[1]/form/div[5]/div[2]/div[2]/label"))
         )
-        clickable_element.click()
+        self.driver.execute_script("arguments[0].click();", clickable_element)
 
     def power(self):
         clickable_element = WebDriverWait(self.driver, 5).until(  #min-h-[54px]    

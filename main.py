@@ -57,9 +57,18 @@ import time
 def main():
     # Твой класс сам откроет нужное окно браузера здесь
     parser = Parser('https://7745.by/catalog/obogrevateli')
-    
+
     parser.accept_cookie()
-    time.sleep(1)
+    time.sleep(5)
+
+
+    # parser.tryis()
+    # time.sleep(2)
+
+
+
+    # parser.accept_cookie()
+    # time.sleep(1)
     
     try:
         parser.electro_choice()
